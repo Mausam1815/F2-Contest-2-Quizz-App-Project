@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/a348de3a12.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- header section -->
+    <header>
+      <nav
+        class="navbar navbar-light bg-white nav-container"
+        id="large-device-nav"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand"
+            ><img class="logo" src="./assets/quizGurdLogo.svg"
+          /></a>
+          <form class="nav-options">
+            <a class="nav-link active" aria-current="page" href="#"
+              >How it works?</a
+            >
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">About us</a>
+            <div class="profile-container" id="profile">
+              <img class="profile" src="./assets/profile.svg" />
+              <a href="#" class="name text-decoration-none">Tarun</a>
+            </div>
+            <button type="button" class="login-button">Login</button>
+          </form>
+        </div>
+      </nav>
+
+      <!-- mobile navbar -->
+      <nav
+        class="navbar navbar-expand-lg navbar-light bg-white"
+        id="mobile-navbar"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"
+            ><img src="./assets/quizGurdLogo.svg"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >How it works?</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="overlay-wrapper">
+      <!-- Home section -->
+      <section id="home-section">
+        <!-- left container -->
+        <div id="home-page">
+          <div class="left-container">
+            <h1 class="heading">Learn new concepts for each question</h1>
+
+            <div class="home-para">
+              <div class="vertical-line"></div>
+              <p class="para">We help you prepare for exams and quizes</p>
+            </div>
+            <button
+              id="startButton"
+              class="custom-button"
+              onclick="displayTopicSection()"
+            >
+              Start solving
+            </button>
+          </div>
+
+          <!-- right container -->
+          <div class="home-img">
+            <img src="./assets/homeImg.svg" />
+          </div>
+        </div>
+        <div class="d-flex justify-content-start align-items-end line">
+          <img src="./assets/home-line.svg" />
+        </div>
+      </section>
+
+      <!-- Choose your favorite topic section -->
+      <section id="topics-section">
+        <div id="favourite-topic-section">
+          <div class="close-button-container">
+            <img
+              id="close-button"
+              onclick="closeTopicsSection()"
+              src="./assets/closeButton.svg"
+            />
+          </div>
+          <div class="favourite-topic-description">
+            <h1>Choose your favorite topic</h1>
+            <p>Select more than 5 topics to start quiz</p>
+          </div>
+          <div class="subjects-container">
+            <div>
+              <button id="subjectButton" onclick="selectingSubject()">
+                Computer Science
+              </button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button class="selected-subject">Java</button>
+              <i class="into-mark-icon"
+                ><img src="./assets/intomarkIcon.svg"
+              /></i>
+            </div>
+            <div>
+              <button class="selected-subject">JavaScript</button>
+              <i class="into-mark-icon selected-subject"
+                ><img src="./assets/intomarkIcon.svg"
+              /></i>
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button>TagBadge JS</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button class="selected-subject">HTML</button>
+              <i class="into-mark-icon"
+                ><img src="./assets/intomarkIcon.svg"
+              /></i>
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button class="selected-subject">CSS</button>
+              <i class="into-mark-icon"
+                ><img src="./assets/intomarkIcon.svg"
+              /></i>
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+            <div>
+              <button class="selected-subject">DSA</button>
+              <i class="into-mark-icon"
+                ><img src="./assets/intomarkIcon.svg"
+              /></i>
+            </div>
+            <div>
+              <button>TagBadge</button>
+              <!-- <i class="into-mark-icon"><img src="./assets/intomarkIcon.svg"></i> -->
+            </div>
+          </div>
+
+          <div class="start-solving-button-container">
+            <button class="custom-button" onclick="startQuiz()">
+              Start quiz
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Category Page  -->
+      <section id="category-page">
+        <div class="question-container" id="question-text"></div>
+
+        <div class="options-container">
+          <!-- Options will be dynamically added here -->
+          <h1>A</h1>
+        </div>
+
+        <div id="next-question-container">
+          <div id="previous">
+            <button id="previous-button">
+              <span><img class="p-1" src="./assets/previousIcon.svg" /></span
+              >Previous
+            </button>
+          </div>
+
+          <div id="results-container" class="results"></div>
+
+          <div id="next-button-container">
+            <div id="next">
+              <button
+                id="next-button"
+                class="custom-button"
+                onclick="nextQuestion()"
+              >
+                Next
+              </button>
+            </div>
+            <div id="skip">
+              <button id="skip-button">
+                skip<spa><img src="./assets/skip.svg" /></spa>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
